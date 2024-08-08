@@ -1,10 +1,15 @@
-import WelcomeMessage from './components/WelcomeMessage';
+// src/App.jsx
+import React from 'react';
 import { useState } from 'react';
+import Header from './components/Header';
+import MainContent from './components/MainContent';
+import Footer from './components/Footer';
+import WelcomeMessage from './components/WelcomeMessage';
 import reactLogo from './assets/react.svg';
 import viteLogo from '/vite.svg';
 import './App.css';
 
-function App() {
+const App = () => {
   const [count, setCount] = useState(0);
 
   return (
@@ -18,10 +23,15 @@ function App() {
         </a>
       </div>
       <h1>Vite + React</h1>
-      
+
       {/* Add the WelcomeMessage component here */}
       <WelcomeMessage />
-      
+
+      {/* Add the new components here */}
+      <Header />
+      <MainContent />
+      <Footer />
+
       <div className="card">
         <button onClick={() => setCount((count) => count + 1)}>
           count is {count}
@@ -35,6 +45,6 @@ function App() {
       </p>
     </>
   );
-}
+};
 
 export default App;
