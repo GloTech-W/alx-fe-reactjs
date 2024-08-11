@@ -1,10 +1,10 @@
 // src/App.jsx
-import React from 'react';
-import { useState } from 'react';
+import React, { useState } from 'react';
 import Header from './components/Header';
 import MainContent from './components/MainContent';
 import Footer from './components/Footer';
 import WelcomeMessage from './components/WelcomeMessage';
+import UserProfile from './components/UserProfile';
 import reactLogo from './assets/react.svg';
 import viteLogo from '/vite.svg';
 import './App.css';
@@ -43,6 +43,9 @@ const App = () => {
       <p className="read-the-docs">
         Click on the Vite and React logos to learn more
       </p>
+
+      {/* Add the UserProfile component here */}
+      <UserProfile name="Alice" age="25" bio="Loves hiking and photography" />
     </>
   );
 };
