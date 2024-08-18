@@ -5,22 +5,20 @@ import MainContent from './components/MainContent';
 import Footer from './components/Footer';
 import WelcomeMessage from './components/WelcomeMessage';
 import UserProfile from './components/UserProfile';
-import UserContext from './contexts/UserContext';
 import reactLogo from './assets/react.svg';
 import viteLogo from '/vite.svg';
 import './App.css';
 
 const App = () => {
   const [count, setCount] = useState(0);
-  const userData = { name: "Jane Doe", email: "jane.doe@example.com" };
 
   return (
-    <UserContext.Provider value={userData}>
+    <>
       <div>
-        <a href="https://vitejs.dev" target="_blank" rel="noopener noreferrer">
+        <a href="https://vitejs.dev" target="_blank">
           <img src={viteLogo} className="logo" alt="Vite logo" />
         </a>
-        <a href="https://react.dev" target="_blank" rel="noopener noreferrer">
+        <a href="https://react.dev" target="_blank">
           <img src={reactLogo} className="logo react" alt="React logo" />
         </a>
       </div>
@@ -48,7 +46,7 @@ const App = () => {
 
       {/* Add the UserProfile component here */}
       <UserProfile name="Alice" age="25" bio="Loves hiking and photography" />
-    </UserContext.Provider>
+    </>
   );
 };
 
