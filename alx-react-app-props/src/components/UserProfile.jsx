@@ -1,8 +1,8 @@
-import React from 'react';
-import { useUser } from './UserContext';
+import React, { useContext } from 'react';
+import UserContext from './UserContext';
 
 const UserProfile = ({ name, age, bio }) => {
-  const userData = useUser(); // Use the custom hook to access the context
+  const userData = useContext(UserContext); // Directly use useContext with UserContext
 
   return (
     <div>
