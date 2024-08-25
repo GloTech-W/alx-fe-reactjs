@@ -6,6 +6,8 @@ import './App.css';
 import RecipeList from './components/RecipeList';
 import AddRecipeForm from './components/AddRecipeForm';
 import RecipeDetails from './components/RecipeDetails'; // Import RecipeDetails component
+import SearchBar from './components/SearchBar'; // Import SearchBar component
+import IngredientFilter from './components/IngredientFilter'; // Import IngredientFilter component
 
 function App() {
   const [count, setCount] = useState(0);
@@ -30,7 +32,14 @@ function App() {
         </p>
       </div>
       <Routes>
-        <Route path="/" element={<><AddRecipeForm /><RecipeList /></>} />
+        <Route path="/" element={
+          <>
+            <SearchBar /> {/* Add SearchBar to the home route */}
+            <IngredientFilter /> {/* Add IngredientFilter to the home route */}
+            <AddRecipeForm />
+            <RecipeList />
+          </>
+        } />
         <Route path="/recipe/:recipeId" element={<RecipeDetails />} />
       </Routes>
       <p className="read-the-docs">
