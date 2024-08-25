@@ -8,9 +8,13 @@ import AddRecipeForm from './components/AddRecipeForm';
 import RecipeDetails from './components/RecipeDetails'; // Import RecipeDetails component
 import SearchBar from './components/SearchBar'; // Import SearchBar component
 import IngredientFilter from './components/IngredientFilter'; // Import IngredientFilter component
+import FavoritesList from './components/FavoritesList'; // Import FavoritesList component
+import RecommendationsList from './components/RecommendationsList'; // Import RecommendationsList component
+import { useRecipeStore } from './components/recipeStore'; // Import the Zustand store
 
 function App() {
   const [count, setCount] = useState(0);
+  const favorites = useRecipeStore(state => state.favorites); // Access the favorites from the Zustand store
 
   return (
     <Router>
@@ -38,6 +42,18 @@ function App() {
             <IngredientFilter /> {/* Add IngredientFilter to the home route */}
             <AddRecipeForm />
             <RecipeList />
+
+            {favorites.length > 0 && ( /* Conditionally render FavoritesList if there are any favorite recipes */
+              <section>
+                <h2>Your Favorites</h2>
+                <FavoritesList />
+              </section>
+            )}
+
+            <section>
+              <h2>Recommended for You</h2>
+              <RecommendationsList /> {/* Always show RecommendationsList */}
+            </section>
           </>
         } />
         <Route path="/recipe/:recipeId" element={<RecipeDetails />} />
