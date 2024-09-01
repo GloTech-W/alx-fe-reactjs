@@ -1,14 +1,13 @@
 import React from 'react';
-import RegistrationForm from './components/RegistrationForm'; // Import the RegistrationForm component
-import './App.css'; // Import your existing CSS file
+import FormikForm from './components/FormikForm';
 
-function App() {
+const App = () => {
   return (
-    <>
+    <div>
       <h1>User Registration</h1>
-      <RegistrationForm /> {/* Render the RegistrationForm component */}
-    </>
+      <FormikForm />
+    </div>
   );
-}
+};
 
 export default App;
