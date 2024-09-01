@@ -1,10 +1,10 @@
 import { useState } from 'react';
-import { BrowserRouter as Router, Routes, Route, Link, Navigate } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import reactLogo from './assets/react.svg';
 import viteLogo from '/vite.svg';
 import './App.css';
 
-// Create simple components for Home, About, and other pages
+// Create simple components for Home, About, BlogPost, and other pages
 function Home() {
   return (
     <div>
@@ -21,6 +21,11 @@ function About() {
       <p>This is the About Page.</p>
     </div>
   );
+}
+
+function BlogPost() {
+  const { id } = useParams();
+  return <div>Blog Post ID: {id}</div>;
 }
 
 function Profile() {
@@ -47,11 +52,6 @@ function ProfileDetails() {
 
 function ProfileSettings() {
   return <div>Profile Settings</div>;
-}
-
-function BlogPost() {
-  const { postId } = useParams();
-  return <div>Blog Post ID: {postId}</div>;
 }
 
 function Login() {
@@ -83,7 +83,7 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
           <Route path="/profile/*" element={<ProtectedRoute element={<Profile />} isAuthenticated={isAuthenticated} />} />
-          <Route path="/blog/:postId" element={<BlogPost />} />
+          <Route path="/blog/:id" element={<BlogPost />} />
           <Route path="/login" element={<Login />} />
         </Routes>
       </div>
