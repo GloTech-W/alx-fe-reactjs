@@ -1,0 +1,46 @@
+[
+    {
+      "id": 1,
+      "title": "Spaghetti Carbonara",
+      "summary": "A creamy Italian pasta dish that combines eggs, cheese, pancetta, and pepper.",
+      "image": "https://via.placeholder.com/400x200",
+      "ingredients": [
+        "Spaghetti",
+        "Eggs",
+        "Parmesan cheese",
+        "Pancetta",
+        "Black pepper"
+      ],
+      "instructions": [
+        "Cook the spaghetti according to package instructions.",
+        "In a bowl, whisk together eggs and cheese.",
+        "In a pan, cook the pancetta until crispy.",
+        "Add the cooked spaghetti to the pan with pancetta.",
+        "Remove from heat and mix in the egg and cheese mixture.",
+        "Season with black pepper and serve."
+      ]
+    },
+    {
+      "id": 2,
+      "title": "Chicken Curry",
+      "summary": "A fragrant and flavorful Indian dish with tender chicken pieces simmered in a spiced curry sauce.",
+      "image": "https://via.placeholder.com/400x200",
+      "ingredients": [
+        "Chicken",
+        "Onions",
+        "Garlic",
+        "Ginger",
+        "Tomato paste",
+        "Curry powder",
+        "Coconut milk"
+      ],
+      "instructions": [
+        "Sauté onions, garlic, and ginger in a pan.",
+        "Add chicken and cook until browned.",
+        "Stir in tomato paste and curry powder.",
+        "Add coconut milk and simmer until the chicken is cooked through.",
+        "Serve with rice."
+      ]
+    }
+  ]
+  
