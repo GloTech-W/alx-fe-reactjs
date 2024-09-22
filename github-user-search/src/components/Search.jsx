@@ -16,7 +16,7 @@ const Search = () => {
       const data = await fetchUserData(username);
       setUser(data);
     } catch (err) {
-      setError("Looks like we can't find the user"); // Updated error message
+      setError("Looks like we can't find the user. Please check the login."); // Updated error message
     } finally {
       setLoading(false);
     }
