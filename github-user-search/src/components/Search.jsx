@@ -34,11 +34,11 @@ const Search = () => {
         <button type="submit">Search</button>
       </form>
       {loading && <p>Loading...</p>}
-      {error && <p>{error}</p>}
+      {error && <p>{error}</p>} {/* Displays the updated error message */}
       {user && (
         <div>
-          <img src={user.avatar_url} alt={user.login} width="100" /> {/* Use user.login */}
-          <h3>{user.login}</h3> {/* Display user's login name */}
+          <img src={user.avatar_url} alt={user.name} width="100" />
+          <h3>{user.name}</h3>
           <a href={user.html_url} target="_blank" rel="noopener noreferrer">View Profile</a>
         </div>
       )}
